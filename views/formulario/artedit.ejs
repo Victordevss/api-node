@@ -1,0 +1,17 @@
+<%-include('../partials/headers.ejs') %>
+
+<div class="container">
+    <h3>Edição</h3>
+    <hr>
+    
+        <form method="post" action="/artUpdate">
+            <input class="form-control" type="text" name="title" placeholder="Digite aqui"><br>
+            <input class="form-control" type="text" name="body" placeholder="Digite aqui"><br>
+            <input type="hidden" name="id" value="<%= articles.id %>">
+            <button class="btn btn-danger">Atualizar</button>
+        </form>
+    
+    
+</div>
+
+<%-include('../partials/footer.ejs') %>

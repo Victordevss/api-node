@@ -1,0 +1,17 @@
+<%-include('../partials/headers.ejs') %>
+<div class="container">
+    <div class="header">
+        <h1>Cadastro</h1>
+        <a href="/category" class="btn btn-danger">Voltar para a tabela de carros</a><br>
+        <hr>
+        <div class="body">
+            <form method="post" action="/user/save">
+                <input class="form-control" type="text" name="email" placeholder="Digite o email"><br>
+                <input class="form-control" type="password" name="password" placeholder="**********"><br>
+                <button  class="btn btn-warning " >Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%-include('../partials/headers.ejs') %>

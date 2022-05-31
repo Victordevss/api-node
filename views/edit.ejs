@@ -1,0 +1,18 @@
+<%-include('partials/headers.ejs') %>
+
+<div class="container">
+    <h3>Edição</h3>
+    <hr>
+    
+        <form method="post" action="/update">
+            <input class="form-control" type="text" name="marca" placeholder="Digite a marca"><br>
+            <input class="form-control" type="text" name="modelo" placeholder="Digite o modelo"><br>
+            <input class="form-control" type="number" name="valor" placeholder="Digite o valor"><br>
+            <input type="hidden" name="id" value="<%= carros.id %>" >
+            <button class="btn btn-danger">Atualizar</button>
+        </form>
+    
+    
+</div>
+
+<%-include('partials/footer.ejs') %>

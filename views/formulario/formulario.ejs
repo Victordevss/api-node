@@ -1,0 +1,18 @@
+<%-include('../partials/headers.ejs') %>
+<div class="container">
+    <div class="header">
+        <h1>Formulário</h1>
+        <a href="/category" class="btn btn-danger">Voltar para a tabela de carros</a><br>
+        <hr>
+        <div class="body">
+            <form method="post" action="/save">
+                <input class="form-control" type="text" name="marca" placeholder="Informe a marca do carro"><br>
+                <input class="form-control" type="text" name="modelo" placeholder="Informe o modelo do carro"><br>
+                <input class="form-control" type="number"  name="valor" placeholder="Informe o valor do carro"><br>
+                <button class="btn btn-warning">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%-include('../partials/headers.ejs') %>

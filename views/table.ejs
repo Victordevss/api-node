@@ -1,0 +1,52 @@
+<%-include('partials/headers.ejs') %>
+
+<body>
+    <div class="container"><br>
+        <h3>Tabela de carros</h3><br>
+        <a href="/form" class="btn btn-danger">Voltar para o formulário de carros</a>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>numero</th>
+                    <th>Título</th>
+                    <th>Corpo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% articles.forEach(article => { %>
+                    <tr>
+                        <th><%= article.id %></th>
+                        <th><%= article.title %></th>
+                        <th><%= article.body %></th>
+                        <th>
+                            <a href="/artEdit/<%= article.id %>" class="btn btn-warning">Editar</a>
+                            <form action="/article/delete" method="post" style="display: inline;" onsubmit="confirmarDelelcao(event, this)">
+                                <input type="hidden" name="id" value="<%= article.id %>">
+                                <button class="btn btn-danger">Deletar</button>
+                            </form>
+                        </th>
+
+                    </tr>
+                <%})%>
+            </tbody>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+<%-include('partials/footer.ejs') %>
+
+<script>
+    function confirmarDelelcao(event, form){
+        event.preventDefault()
+        var decision = confirm("Você que deletar esta categoria")
+        if(decision){
+            form.submit()
+        }
+    }
+</script>
+
+
+

@@ -1,0 +1,30 @@
+<%-include('../partials/headers.ejs') %>
+<div class="container">
+    <div class="header">
+        <h1>Formulário</h1>
+        <a href="/category" class="btn btn-danger">Voltar para a tabela de carros</a><br>
+        <hr>
+        <div class="card-body">
+            <form method="post" action="/article/save">
+                <input class="form-control" type="text" name="title" placeholder="Defina o título"><br>
+                <textarea name="body" class="form-control" placeholder="Escreva aqui" id="article" ></textarea><br>
+                <button class="btn btn-warning">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<%-include('../partials/headers.ejs') %>
+<script src="/tinymce/tinymce.min.js">
+</script>
+
+<script>
+    tinymce.init({
+        selector: '#article',
+        plugins: [
+            'advlist autolink link image lists print preview hr searchreplace wordcount fullscreen insertdatetime media save table paste emoticons'
+        ]
+    })
+</script>
